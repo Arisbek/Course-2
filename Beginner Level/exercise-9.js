@@ -1,5 +1,6 @@
 var start = 1
 var end = 100
+var resultDiv = document.getElementById('p');
 for (var i=start; i<=end; i++){
     var out = ""
     if (i%3==0){
@@ -8,10 +9,12 @@ for (var i=start; i<=end; i++){
     if (i%5==0){
         out += "Buzz"
     }
+    var p = document.createElement('p')
     if (out.length>0){
-        console.log(out)
+        p.textContent = out;
     }
     else {
-        console.log(i)
+        p.textContent = i;
     }
+    resultDiv.appendChild(p);
 }

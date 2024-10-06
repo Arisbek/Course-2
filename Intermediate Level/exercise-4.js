@@ -4,10 +4,25 @@ function countWords(s){
     }
     var hm = new Map()
     var words = s.split(' ')
+    var cnt = 0
     for (w of words){
+        if (w===""){continue}
         hm.set(w,hm.has(w) ? hm.get(w)+1 : 1)
+        cnt ++
     }
-    return hm
+    return [hm, cnt]
 }
 
-console.log(countWords("A b c c"))
+function inp(){
+    s = document.getElementById('i').value
+    var output = document.getElementById('p');
+    output.innerHTML = '';
+
+    var res = countWords(s);
+    var hm = res[0]
+    var cnt = res[1]
+    for (var [p, v] of hm.entries()) {
+        output.innerHTML += p + ': ' + v + '<br />';
+    }
+    output.innerHTML += "Total number of words: "+cnt
+}

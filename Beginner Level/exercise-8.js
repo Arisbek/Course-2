@@ -9,4 +9,13 @@ function factorial(n){
     return ans
 }
 
-console.log(factorial(5))
+function inp(){
+    num = parseInt(document.getElementById('i').value)
+    document.getElementById('p').textContent = `! = ${factorial(num)}`
+}
+
+function isNumberKey(evt) {
+    var charCode = evt.which ? evt.which : evt.keyCode;
+    if (charCode > 8 && (charCode < 48 || charCode > 57)) {return false;}
+    return true;
+}

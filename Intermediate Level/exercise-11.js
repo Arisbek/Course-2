@@ -17,6 +17,7 @@ function capitilize(s){
     return s
 }
 
-var s = "abc Da f1's "
-
-console.log(capitilize(s))
+function inp(){
+    s = document.getElementById('i').value
+    document.getElementById('p').textContent = capitilize(s)
+}

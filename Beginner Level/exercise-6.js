@@ -14,4 +14,7 @@ function is_palindrome(s){
     return true
 }
 
-console.log(is_palindrome("ab"))
+function inp(){
+    s = document.getElementById('i').value
+    document.getElementById('p').textContent = is_palindrome(s)
+}

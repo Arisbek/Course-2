@@ -6,7 +6,6 @@ const options = {
 function getCurrentDateTime() {
     var now = new Date();
     var formattedDate = now.toLocaleString('ky-KR', options);
-    console.log("Current Date and Time: " + formattedDate);
+    return "Current Date and Time: " + formattedDate
 }
-
-getCurrentDateTime();
+document.write(getCurrentDateTime())

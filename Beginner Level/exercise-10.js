@@ -1,4 +1,4 @@
-const dig = /[0-9.]/
+/*const dig = /[0-9.]/
 const num = /^[0-9]+(.[0-9]+)?$/
 // console.log(num.test("1.51"))
 function calc(s){
@@ -24,4 +24,21 @@ console.log(calc("+1"))
 console.log(calc("1+1"))
 console.log(calc("1."))
 console.log(calc("0."))
-console.log(calc("1++1"))
+console.log(calc("1++1"))*/
+
+const double = /[+-/*][+-/*]/
+const brack = /(\([+/*])|([+/*-]\))/
+const ex = /\(\(\d*([+-/*]*\d*)*\)\)/
+const dot = /(\D.)|(.\D)/
+const i_n = /\d*.\d*.\d*/
+
+
+/*
+
+(/d*)
+
+^[(.0-9]
+[^/d].
+.[^/d]
+(/d*([+-/*]* /d*)*)
+*/

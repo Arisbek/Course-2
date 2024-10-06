@@ -1,8 +1,8 @@
 function deepCopy(obj){
-    return JSON.parse(JSON.stringify(obj))
+    return structuredClone(obj)
 }
 
-var original = {1:2, 2:3}
+var original = new Map([[1,2]])
 var copy = deepCopy(original)
 console.log(original===copy)
 console.log(original)

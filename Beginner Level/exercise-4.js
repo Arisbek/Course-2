@@ -7,4 +7,11 @@ function celsius2farenheit(c){
     }
 }
 
-console.log(celsius2farenheit(4))
+function update(){
+    t = parseFloat(document.getElementById('i').value)
+    if (isNaN(t)){
+        document.getElementById('p').textContent = "Please enter valid number"
+        return
+    }
+    document.getElementById('p').textContent = "Temperature in F°: "+celsius2farenheit(t)
+}

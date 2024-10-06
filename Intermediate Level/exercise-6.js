@@ -25,10 +25,14 @@ function checkAnagrams(s1, s2){
 
     for (cnt of hm.values()){
         if (cnt!=0){
-            return false
+            return "Not anagrams"
         }
     }
-    return true
+    return "Anagrams"
 }
 
-console.log(checkAnagrams("ab","aab"))
+function inp(){
+    s1 = document.getElementById('i1').value
+    s2 = document.getElementById('i2').value
+    document.getElementById('p').textContent = checkAnagrams(s1,s2)
+}

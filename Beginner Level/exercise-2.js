@@ -10,4 +10,7 @@ function rev(s){
     return s
 }
 
-console.log(rev("REv"))
+function handleRev(){
+    s = document.getElementById("i").value
+    document.getElementById('p').textContent = "Reversed string: "+rev(s);
+}
