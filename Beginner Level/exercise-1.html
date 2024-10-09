@@ -8,11 +8,12 @@
 <body>
     <h1>Add function</h1>
     <a href="../index.html">Homepage</a>
+    <div>Enter two valid numbers</div>
     <div>Number 1: </div>
-    <input type="number" id="number1">
+    <input type="number" id="number1" inputmode="numeric" onkeypress="return isNumberKey(event)">
     
     <div>Number 2: </div>
-    <input type="number" id="number2">
+    <input type="number" id="number2" inputmode="numeric" onkeypress="return isNumberKey(event)">
 
     <button onclick="handleAdd()">Add</button>
 

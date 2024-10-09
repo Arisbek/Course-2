@@ -29,7 +29,7 @@ function arrIntersection(ar1,ar2){
     return inter
 }
 
-var ar1 = [1,1]
-var ar2 = [2,1,1]
+var ar1 = [1,"1"]
+var ar2 = [2,1,"1"]
 
 console.log(arrIntersection(ar1,ar2))

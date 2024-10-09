@@ -9,7 +9,7 @@
     <h1>Celcius2Farenheit</h1>
     <a href="../index.html">Homepage</a>
     <div>Enter temperature in C°</div>
-    <input type="number" id="i" oninput="update()">
+    <input type="number" id="i" oninput="update()" onkeypress="return isNumberKey(event)">
     <p id='p'></p>
     <script src="exercise-4.js"></script>
 </body>

@@ -1,1 +1,1 @@
-!!Exercises: 13th of Beginner Level and 13th, 3rd of Intermediate Level have only js files without html!!
+!!Exercises: 13th of Intermediate Level have only js files without html!!

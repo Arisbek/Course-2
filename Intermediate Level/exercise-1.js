@@ -4,7 +4,7 @@ function heap_sort(ar){
         return
     }
     if (ar.length==0){
-        return
+        return ar
     }
 
     // build maxify
@@ -20,7 +20,7 @@ function heap_sort(ar){
                 ar[curr] = temp
                 curr = curr*2+2
             }
-            else if(ar[curr*2+2]<ar[curr*2+1] && ar[curr*2+1]>ar[curr]){
+            else if(ar[curr*2+2]<=ar[curr*2+1] && ar[curr*2+1]>ar[curr]){
                 temp = ar[curr*2+1]
                 ar[curr*2+1] = ar[curr]
                 ar[curr] = temp
@@ -68,6 +68,19 @@ function heap_sort(ar){
     }
 }
 
-var arr = [4,2,4,1,-3,2.5,4,6,3,4]
-heap_sort(arr)
-console.log(arr)
+// var arr = [4,2,4,1,-3,2.5,4,6,3,4]
+// heap_sort(arr)
+// console.log(arr)
+function sort_ar(){
+    var inputs = document.querySelectorAll('#arrayInputs input');
+    var ar = Array.from(inputs)
+        .map(input => parseFloat(input.value))
+        .filter(value => !isNaN(value));  // Filter out NaN values (empty inputs)
+
+    // Show the parsed array in the <p> element
+    // document.getElementById('p').innerText = values.length > 0 ? values : 'No numbers entered';
+
+    // Find the max using the mx function
+    heap_sort(ar);
+    document.getElementById('p').innerText = "["+ar+"]";
+}

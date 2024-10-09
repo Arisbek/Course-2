@@ -12,4 +12,14 @@ function sum(ar){
     return tot
 }
 
-console.log(sum([1,2.5]))
+function findSum() {
+    var inputs = document.querySelectorAll('#arrayInputs input');
+    var values = Array.from(inputs)
+        .map(input => parseFloat(input.value))
+        .filter(value => !isNaN(value));  // Filter out NaN values (empty inputs)
+
+    // document.getElementById('p').innerText = values.length > 0 ? values : 'No numbers entered';
+
+    document.getElementById('p').innerText = sum(values);
+}
+// console.log(sum([1,2.5]))

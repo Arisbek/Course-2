@@ -17,3 +17,10 @@ function handleAdd() {
     let result = add(num1, num2);
     document.getElementById('result').textContent = "The sum is: " + result;
 }
+
+function isNumberKey(evt) {
+    var charCode = evt.which ? evt.which : evt.keyCode;
+    if (charCode===46 || charCode===45){return true}
+    if (charCode > 8 && (charCode < 48 || charCode > 57)) {return false;}
+    return true;
+  }
