@@ -12,4 +12,17 @@ function getUniqueValues(ar){
     return Array.from(hm.values())
 }
 
-console.log(getUniqueValues([[1,2],[1,2],1,"a"]))
+// console.log(getUniqueValues([[1,2],[1,2],1,"a"]))
+
+function get(){
+    var inputs = document.querySelectorAll('#arrayInputs input');
+    
+    // Convert input values from strings to numbers if applicable
+    var values = Array.from(inputs).map(input => input.value);
+
+    // Remove duplicates from the array
+    values = getUniqueValues(values);
+
+    // Display the result in the <p> element
+    document.getElementById('p').innerText = "["+values.join(', ')+"]";
+}

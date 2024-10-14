@@ -22,14 +22,18 @@ function inp(){
     var textElement = document.getElementById('p');
 
     var obj = Create();
-    textElement.innerText = JSON.stringify(obj) + "\n";
+    textElement.innerText = "Created object:" + "\n";
+    textElement.innerText += JSON.stringify(obj) + "\n";
 
     add(obj);
+    textElement.innerText += "Added property:" + "\n";
     textElement.innerText += JSON.stringify(obj) + "\n";
 
     var mes = del(obj);
+    textElement.innerText += "Deleted property:" + "\n";
     textElement.innerText += JSON.stringify(mes) + "\n";
 
     mes = update(obj);
+    textElement.innerText += "Updated property:" + "\n";
     textElement.innerText += JSON.stringify(mes) + "\n";
 }

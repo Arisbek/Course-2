@@ -88,7 +88,8 @@ function inp(){
 
 function isNumberKey(evt) {
     var charCode = evt.which ? evt.which : evt.keyCode;
-    if (charCode===32 || (charCode<=40 & charCode<=43) || (charCode<=45 & charCode<=47)){return true}
+    if (evt.key === '/' || evt.key === '.'){return true}
+    if (charCode===32 || (charCode<=40 && charCode<=43) || (charCode<=45 && charCode<=47)){return true}
     if (charCode > 8 && (charCode < 48 || charCode > 57)) {return false;}
     return true;
   }
